@@ -1,0 +1,26 @@
+[
+	{
+		"lovkost": "1,4",
+		"sila": "3",
+		"inta": "0.4",
+		"atribut": "sila",
+		"hero": "pudge",
+		"games": "dota"
+	},
+	{
+		"lovkost": "1,4",
+		"sila": "1,5",
+		"inta": "1",
+		"atribut": "universal",
+		"hero": "phoenix",
+		"games": "dota"
+	},
+	{
+		"lovkost": "5 ed",
+		"sila": "1",
+		"inta": "2",
+		"atribut": "agila",
+		"hero": "arc warden",
+		"games": "dota"
+	}
+]
