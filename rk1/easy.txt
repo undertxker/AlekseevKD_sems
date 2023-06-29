@@ -1,1 +1,0 @@
-Generally, any device that can perform numerical calculations, even an adding machine, may be called a computer. 
