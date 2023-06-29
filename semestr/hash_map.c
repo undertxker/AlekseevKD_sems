@@ -80,4 +80,24 @@ hash_map_entry* hash_map_find(hash_map* map, dynamic_string* key)
 
 void hash_map_delete(hash_map* map, hash_map_entry* entry) 
 {
-  size_t index = entry - map->entries; // вычисляем индекс записи в х
+  size_t index = entry - map->entries; // вычисляем индекс записи в хэш-карте
+
+  dynamic_string_free(map->entries[index].key); // освобождаем память, занятую ключом записи
+  map->free_value(map->entries[index].value); // вызываем функцию освобождения значения записи
+  map->entries[index].key = NULL; // устанавливаем ключ записи в NULL
+  map->entries[index].value = NULL; // устанавливаем значение записи в NULL
+  map->length--; // уменьшаем длину хэш-карты на 1
+
+  while (map->entries[index].key != NULL) // пока ключ записи не равен NULL
+  {
+    dynamic_string* tmpKey = map->entries[index].key; // сохраняем ключ записи
+    void* tmpValue = map->entries[index].value; // сохраняем значение записи
+
+    map->entries[index].key = NULL; // устанавливаем ключ записи в NULL
+    map->entries[index].value = NULL; // устанавливаем значение записи в NULL
+
+    hash_map_add(map, tmpKey, tmpValue); // добавляем запись в хэш-карту
+
+    index = (index + 1) % map->capacity; // переходим к следующей записи по кругу
+  }
+}
