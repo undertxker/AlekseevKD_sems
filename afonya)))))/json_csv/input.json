@@ -1,21 +1,33 @@
 [
     {
-        "mama": "papa",
-        "lol":  "kek ",
-        "krokodil":"drugs"
+        "games":"dota",
+        "hero":"pudge",
+        "atribut":"sila",
+        "prirost artibut": {
+            "inta":"0.4",
+            "sila":"3",
+            "lovkost":"1,4"
+        }
     },
     {
-        "games":"5",
-        "averageold":"18",
-        "cs":"go",
-        "dota": {
-            "chapter":"2",
-            "heroes":"100+"
+        "games":"dota",
+        "hero":"phoenix",
+        "atribut":"universal",
+        "prirost artibut": {
+            "inta":"1",
+            "sila":"1,5",
+            "lovkost":"1,4"
         }
 
     },
     {
-        "toxic":"wave",
-        "primery":"slogno for me"
+        "games":"dota",
+        "hero":"arc warden",
+        "atribut":"agila",
+        "prirost artibut": {
+            "inta":"2",
+            "sila":"1",
+            "lovkost":"5 ed"
+        }
     }
 ]
